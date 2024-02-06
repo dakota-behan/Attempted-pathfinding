@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    *,
+    html,
+    body,
+    ::before,
+    ::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black
+    }
+
+    .flash {
+      animation-name: flash;
+      animation-duration: .2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+    }
+
+    @keyframes flash {
+      0% {
+        scale: 1
+      }
+
+      100% {
+        scale: 2
+      }
+    }
+
+    .display {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      /* transform: scale(3);
+      top: 30%;
+      left: 40%; */
+      /* transform: scale(.4);
+      top: -70%; */
+    }
+
+    .display>div {
+      display: flex;
+      flex-direction: row;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="display" id="display">
+
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
